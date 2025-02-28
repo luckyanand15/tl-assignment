@@ -89,7 +89,7 @@ const Products = () => {
 
       let formattedData = data.map((product, index) => ({
         ...product,
-        img: SampleImage,
+        img: product.images.front ? product.images.front : SampleImage,
         id: product.id !== null ? product.id : `tempId${index}`,
         name: product.name,
         category: product.main_category,
