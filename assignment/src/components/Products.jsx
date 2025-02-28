@@ -174,16 +174,16 @@ const Products = () => {
 
   return (
     <Box sx={{ height: 500, width: "100%" }}>
-      <Box sx={{display:"flex", gap:2}}>
+      <Box sx={{ display: { xs: "block", md: "flex" }, gap:2, mb:2 }}>
         <TextField
           variant="outlined"
           label="Search"
           value={searchInput}
           onChange={handleSearchInput}
-          sx={{ minWidth: 300 }}
+          sx={{ minWidth: {xs: "100%", md:300}}}
         />
 
-        <FormControl sx={{ minWidth: 200, marginBottom: 2 }} variant="standard">
+        <FormControl sx={{ minWidth: { xs: "100%", md: 200 }, mb:{xs:2} }} variant="standard">
           <InputLabel id="filter-by-category">Filter</InputLabel>
           <Select value={selectedCategories} onChange={handleCategoryChange} labelId="filter-by-category">
             {categories.map((category, idx) => (
@@ -194,7 +194,7 @@ const Products = () => {
           </Select>
         </FormControl>
 
-        <FormControl sx={{ minWidth: 200, marginBottom: 2 }} variant="standard">
+        <FormControl sx={{ minWidth: { xs: "100%", md: 200 }, mb:{xs:2} }} variant="standard">
           <InputLabel id="sort-by-price">Sort By Price</InputLabel>
           <Select value={sortOrder} onChange={handleSortChange} labelId="sort-by-price">
             <MenuItem value="None">None</MenuItem>
