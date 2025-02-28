@@ -1,0 +1,10 @@
+.wrapper{
+    border: 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.mrp{
+    font-size: 25px;
+    font-weight: 700;
+}

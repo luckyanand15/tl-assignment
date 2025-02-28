@@ -1,10 +1,18 @@
-import './App.css';
+import { Box, Typography } from "@mui/material";
+import "./App.css";
+import Products from "./components/Products";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <Box>
+      <Box className="app">
+        <Typography sx={{ fontSize: "40px", fontWeight: 600 }}>
+          Products
+        </Typography>
+      </Box>
+      <Outlet />
+    </Box>
   );
 }
 
